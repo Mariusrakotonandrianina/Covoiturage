@@ -11,7 +11,7 @@ function MyApp({ Component, pageProps }) {
 
   useEffect(() => {
     const fetchStripeKey = async () => {
-      const stripeApiKey = "pk_test_51NxFJkCLci3B102ShP40YR4zulTCx7qg2PH5gjjqr8COKPL1sX9pmMO7nU5rmnEpEJs0Wi1rH6JPdk9k9c8gRFIT00V32OqBz6";
+      const stripeApiKey = "";
       const stripePromise = await loadStripe(stripeApiKey);
       setStripePromise(stripePromise);
     };
