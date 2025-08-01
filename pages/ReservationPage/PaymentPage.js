@@ -53,7 +53,7 @@ const PaymentPage = () => {
   const fetchReservedDates = async (locationId) => {
     try {
       const response = await axios.get(
-        `http://127.0.0.1:5002/api/getReservedDates`,
+        ``,
         {
           params: { locationId },
         }
@@ -134,7 +134,7 @@ const PaymentPage = () => {
 
         const amountInCents = Math.round(item.frais * 100);
 
-        const response = await fetch("http://127.0.0.1:5002/api/Payment", {
+        const response = await fetch("", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -163,7 +163,7 @@ const PaymentPage = () => {
         };
 
         await axios.post(
-          "http://127.0.0.1:5002/api/createReserLocation",
+          "",
           paymentData
         );
       });
