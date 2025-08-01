@@ -70,7 +70,7 @@ const CheckBox = () => {
   const checkReservationStatus = async (trajetId) => {
     try {
       const response = await axios.get(
-        `http://127.0.0.1:5002/api/reservedPlaces?trajetId=${trajetId}`
+        ``
       );
       return response.data.reservedPlaces;
     } catch (error) {
@@ -152,7 +152,7 @@ const CheckBox = () => {
       const nbPlaceReserver = countSelectedPlaces();
 
       const response = await axios.post(
-        "http://127.0.0.1:5002/api/processPayment",
+        "",
         {
           amount: amount,
           paymentMethod: paymentMethod.id,
@@ -183,7 +183,7 @@ const CheckBox = () => {
       });
 
       await axios.post(
-        "http://127.0.0.1:5002/api/createReservation",
+        "",
         paymentData
       );
 
