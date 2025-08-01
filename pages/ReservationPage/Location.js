@@ -16,7 +16,7 @@ const Location = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://127.0.0.1:5002/api/getLocation");
+        const response = await axios.get("");
         setLocations(response.data);
         setLoading(false);
       } catch (error) {
@@ -43,7 +43,6 @@ const Location = () => {
     }
     try {
       const response = await axios.get(
-        `http://127.0.0.1:5002/api/searchLocation?searchTerm=${term}`
       );
       setLocations(response.data);
       if (response.data.length === 0) {
