@@ -28,7 +28,7 @@ const historiqueReservation = () => {
   const fetchReservation = () => {
     axios
       .get(
-        `http://127.0.0.1:5002/api/getReservationsByUser?userEmail=${utilisateurEmail}`
+        ``
       )
       .then((response) => setReservations(response.data))
       .catch((error) => console.error("Error fetching Reservation", error));
